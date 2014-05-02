@@ -1,10 +1,10 @@
 === WP True Typed ===
 Contributors: dbmartin
-Donate link: 
 Tags: spam, anti-spam, antispam, comments, comment, secure, comment-spam, 
 Requires at least: 2.7.1
 Tested up to: 3.8
-Stable tag: trunk
+Stable tag: 1.5
+License: GPLv2
 
 WP True Typed is an anti-spam plugin to protect your site from comment spam.
 
@@ -31,7 +31,6 @@ Features:
 1. Upload the `wp-true-typed` folder to the your plugins directory.
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
-
 == Frequently Asked Questions ==
 
 = Does it work with any comment form? =
@@ -46,3 +45,9 @@ anti-spam plugins.
 = Do you provide support for the plugin? =
 
 Yes!  Just drop a line on the plugin site in the comments section.
+
+== Changelog ==
+= 1.5 =
+* encapsulate code within `wpTrueTyped` Class
+* properly register/enqueue stylesheet
+* fixed validation form field `label`
