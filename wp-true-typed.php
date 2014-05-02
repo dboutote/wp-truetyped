@@ -3,7 +3,7 @@
 Plugin Name: WP True Typed
 Plugin URI: http://darrinb.com/notes/2010/wp-true-typed/
 Description: Anti-spam challenge question for your comment form.
-Version: 1.5
+Version: 1.5.1
 Author: Darrin Boutote
 Author URI: http://darrinb.com
 */
@@ -44,6 +44,10 @@ class wpTrueTyped {
 
 	public function init(){
 		global $post;
+		
+		if(is_null($post) || !$post) {
+			return;
+		}
 
 		// Will not load if comments are closed or author is  already approved to comment
 		if( !comments_open($post->ID) || $this->author_can_comment() ) {
